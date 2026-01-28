@@ -30,6 +30,16 @@ export const Pricing = () => {
           </div>
         </div>
 
+        {/* DISCLAIMER DE URGÊNCIA NO PREÇO */}
+        <div className="w-full mb-6">
+          <div className="bg-red-500/5 border border-red-500/20 py-3 px-6 rounded-2xl flex items-center justify-center gap-3 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div>
+            <p className="text-red-500 text-sm md:text-base font-bold text-center">
+              Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
+            </p>
+          </div>
+        </div>
+
         <div className="relative bg-slate-900 rounded-3xl border border-slate-700 p-8 md:p-12 shadow-2xl overflow-visible">
             
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-amber-500/5 blur-3xl rounded-full -z-10"></div>

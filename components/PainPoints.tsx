@@ -35,7 +35,7 @@ export const PainPoints = () => {
           <span className="text-amber-500">Mas um Marketing Invisível?</span>
         </h2>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-          Não adianta ser o melhor da cidade se o cliente não consegue te encontrar. Identifique o que está travando seu crescimento hoje:
+          Não adianta ser o melhor da cidade se o cliente não consegue te encontrar. <span className="font-bold text-slate-200">Identifique o que está travando seu crescimento hoje:</span>
         </p>
       </div>
 

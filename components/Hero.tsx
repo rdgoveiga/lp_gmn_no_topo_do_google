@@ -22,9 +22,19 @@ export const Hero = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col items-center text-center">
         
         {/* BADGE SUPERIOR - MÉTODO VALIDADO */}
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-10 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
+        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-8 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
           <Star className="w-5 h-5 fill-amber-500 animate-[spin_4s_linear_infinite]" />
           <span className="uppercase tracking-widest">Método validado por + de 200 empresas</span>
+        </div>
+
+        {/* DISCLAIMER DE URGÊNCIA */}
+        <div className="w-full max-w-2xl mb-10">
+          <div className="bg-red-500/5 border border-red-500/20 py-3 px-6 rounded-xl flex items-center justify-center gap-3 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div>
+            <p className="text-red-500 text-sm md:text-base font-bold text-center">
+              Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
+            </p>
+          </div>
         </div>
         
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-8 text-white font-serif drop-shadow-2xl">
@@ -50,7 +60,7 @@ export const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
             </span>
-            <span>Inscrição 100% Segura via Eduzz</span>
+            <span>Inscrição 100% Segura</span>
           </div>
           <span className="text-slate-500 hidden sm:inline">•</span>
           <div className="flex items-center gap-2 text-amber-500 font-bold">
