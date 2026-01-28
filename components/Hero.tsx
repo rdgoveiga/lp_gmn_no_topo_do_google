@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from './ui/Button';
-import { Star, ArrowRight, ShieldCheck, Check, RotateCcw, Sparkles, Verified } from 'lucide-react';
+import { Star, ArrowRight, Check, RotateCcw, ShieldCheck } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -19,63 +19,9 @@ export const Hero = () => {
       {/* Efeitos de Luz de Fundo */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/20 rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
-      {/* SELO PROFISSIONAL (Desktop) */}
-      <div className="hidden lg:block absolute top-12 right-12 z-20 animate-float">
-        <div className="relative group perspective-1000">
-          {/* Efeito de Brilho Externo */}
-          <div className="absolute inset-0 bg-amber-500/20 rounded-3xl blur-2xl group-hover:bg-amber-500/40 transition-all duration-700"></div>
-          
-          <div className="relative w-60 bg-slate-900/90 backdrop-blur-xl border border-white/10 p-5 rounded-3xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
-            
-            {/* Header do Selo */}
-            <div className="flex items-center gap-2 mb-3">
-              <div className="bg-amber-500 rounded-lg p-1.5 shadow-lg shadow-amber-500/40">
-                <Verified className="w-5 h-5 text-slate-900" />
-              </div>
-              <span className="text-[10px] font-black uppercase text-amber-500 tracking-tighter">Garantia de<br/>Simplicidade</span>
-            </div>
-
-            <h4 className="text-white font-bold text-xs mb-3 leading-tight">
-              Aplique mesmo sem experiência em marketing.
-            </h4>
-
-            {/* Rodapé do Selo (O "CTA" da Garantia) */}
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-3 flex items-center justify-center gap-2 shadow-inner border border-white/10">
-              <RotateCcw className="w-4 h-4 text-slate-900 animate-spin-slow" />
-              <span className="text-[10px] font-black text-slate-900 uppercase leading-none">
-                Devolução total se não funcionar
-              </span>
-            </div>
-
-            {/* Detalhe Decorativo */}
-            <div className="absolute -top-2 -right-2 bg-slate-950 border border-amber-500/30 w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
-              <Sparkles className="w-4 h-4 text-amber-500" />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col items-center text-center">
         
-        {/* SELO PROFISSIONAL (Mobile / Tablet) */}
-        <div className="lg:hidden w-full max-w-sm px-5 py-4 rounded-3xl bg-slate-900/90 border border-amber-500/40 backdrop-blur-xl shadow-2xl mb-8 flex flex-col gap-3">
-          <div className="flex items-center gap-3">
-            <div className="bg-amber-500 p-1.5 rounded-lg">
-              <ShieldCheck className="w-5 h-5 text-slate-900" />
-            </div>
-            <span className="text-amber-500 font-black uppercase text-[10px] tracking-widest">Garantia de Simplicidade</span>
-          </div>
-          
-          <p className="text-white font-bold text-sm text-left leading-snug">
-            Aplique mesmo sem experiência em marketing.
-          </p>
-          
-          <div className="bg-amber-500/10 border border-amber-500/20 py-2.5 px-3 rounded-xl flex items-center gap-2">
-             <RotateCcw className="w-4 h-4 text-amber-500" />
-             <span className="text-[10px] font-bold text-amber-500 uppercase tracking-tight">Devolução total se não funcionar</span>
-          </div>
-        </div>
-
+        {/* BADGE SUPERIOR - MÉTODO VALIDADO */}
         <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-10 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
           <Star className="w-5 h-5 fill-amber-500 animate-[spin_4s_linear_infinite]" />
           <span className="uppercase tracking-widest">Método validado por + de 200 empresas</span>
@@ -97,7 +43,8 @@ export const Hero = () => {
           </Button>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-slate-300 bg-slate-900/40 py-3 px-8 rounded-2xl backdrop-blur-sm border border-slate-700/50">
+        {/* BARRA DE CONFIANÇA */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-slate-300 bg-slate-900/40 py-3 px-8 rounded-2xl backdrop-blur-sm border border-slate-700/50 mb-10">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -110,9 +57,42 @@ export const Hero = () => {
             <Check className="w-4 h-4" />
             <span>Passo a passo nível iniciante</span>
           </div>
-          <span className="text-slate-500 hidden sm:inline">•</span>
-          <span className="hidden sm:inline">Garantia incondicional de 7 dias</span>
         </div>
+
+        {/* NOVO SELO DE GARANTIA (Reposicionado abaixo do Trust Bar) */}
+        <div className="w-full max-w-md mx-auto">
+          <div className="relative group perspective-1000">
+            {/* Efeito de Brilho Suave */}
+            <div className="absolute inset-0 bg-amber-500/10 rounded-[2rem] blur-xl group-hover:bg-amber-500/20 transition-all duration-700"></div>
+            
+            <div className="relative bg-[#0F172A] border border-amber-500/30 p-6 md:p-8 rounded-[2rem] shadow-2xl flex flex-col gap-5 text-left transition-transform duration-500 hover:scale-[1.02]">
+              
+              {/* Header do Selo */}
+              <div className="flex items-center gap-4">
+                <div className="bg-amber-500 p-2.5 rounded-xl shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+                  <ShieldCheck className="w-6 h-6 text-[#0F172A]" />
+                </div>
+                <span className="text-amber-500 font-black uppercase text-xs md:text-sm tracking-[0.15em] leading-tight">
+                  Garantia de <br className="md:hidden" /> Simplicidade
+                </span>
+              </div>
+
+              {/* Conteúdo Principal */}
+              <p className="text-white font-bold text-base md:text-lg leading-snug">
+                Aplique mesmo sem experiência em marketing.
+              </p>
+
+              {/* Pill de CTA da Garantia */}
+              <div className="bg-transparent border border-amber-500/40 py-3 px-4 rounded-xl flex items-center gap-3">
+                 <RotateCcw className="w-5 h-5 text-amber-500" />
+                 <span className="text-[11px] md:text-xs font-black text-amber-500 uppercase tracking-widest leading-none">
+                   Devolução total se não funcionar
+                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
