@@ -5,7 +5,22 @@ import { Star, ArrowRight, Check, RotateCcw, ShieldCheck } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex flex-col overflow-hidden">
+      {/* DISCLAIMER TOP BAR (HEADER AREA) */}
+      <div className="relative z-50 w-full bg-[#1a0a0a] border-b border-red-900/30 py-3 px-4 shadow-2xl overflow-hidden">
+        {/* Subtle red glow background for the top bar */}
+        <div className="absolute inset-0 bg-red-600/5 animate-pulse"></div>
+        <div className="relative max-w-7xl mx-auto flex items-center justify-center gap-3">
+          <div className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+          </div>
+          <p className="text-red-600 text-[10px] md:text-sm font-black uppercase tracking-[0.1em] text-center">
+            Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
+          </p>
+        </div>
+      </div>
+
       {/* IMAGEM DE FUNDO */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -19,7 +34,7 @@ export const Hero = () => {
       {/* Efeitos de Luz de Fundo */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/20 rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 flex flex-col items-center text-center flex-1 justify-center">
         
         {/* BADGE SUPERIOR - MÉTODO VALIDADO */}
         <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-12 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
@@ -60,7 +75,7 @@ export const Hero = () => {
         </div>
 
         {/* SELO DE GARANTIA */}
-        <div className="w-full max-w-md mx-auto mb-10">
+        <div className="w-full max-w-md mx-auto">
           <div className="relative group perspective-1000">
             <div className="absolute inset-0 bg-amber-500/10 rounded-[2rem] blur-xl group-hover:bg-amber-500/20 transition-all duration-700"></div>
             <div className="relative bg-[#0F172A] border border-amber-500/30 p-6 md:p-8 rounded-[2rem] shadow-2xl flex flex-col gap-5 text-left transition-transform duration-500 hover:scale-[1.02]">
@@ -82,19 +97,6 @@ export const Hero = () => {
                  </span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* DISCLAIMER DE URGÊNCIA - POSICIONADO APÓS A GARANTIA */}
-        <div className="w-full max-w-3xl">
-          <div className="bg-[#1a0a0a] border border-red-900/40 py-4 px-6 rounded-2xl flex items-center justify-center gap-4 backdrop-blur-md shadow-2xl">
-            <div className="relative flex h-3 w-3 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></span>
-            </div>
-            <p className="text-red-600 text-sm md:text-base font-extrabold text-center tracking-tight">
-              Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
-            </p>
           </div>
         </div>
 
