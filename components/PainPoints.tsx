@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Section } from './ui/Section';
 import { SearchX, TrendingDown, Wallet, Clock, Quote } from 'lucide-react';
@@ -30,7 +31,7 @@ export const PainPoints = () => {
     <Section className="relative">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Você tem um Produto Incrível,<br />
+          Você tem um serviço incrível,<br />
           <span className="text-amber-500">Mas um Marketing Invisível?</span>
         </h2>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
