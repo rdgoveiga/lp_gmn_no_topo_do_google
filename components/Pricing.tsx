@@ -12,7 +12,6 @@ export const Pricing = () => {
   return (
     <Section id="pricing" className="py-24">
       <div className="max-w-3xl mx-auto">
-        {/* NOVA ADIÇÃO 4: ANCORAGEM DE OFERTA */}
         <div className="text-center mb-16 px-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400 text-[10px] uppercase tracking-widest mb-6">
             <TrendingUp className="w-3 h-3" />
@@ -30,11 +29,14 @@ export const Pricing = () => {
           </div>
         </div>
 
-        {/* DISCLAIMER DE URGÊNCIA NO PREÇO */}
-        <div className="w-full mb-6">
-          <div className="bg-red-500/5 border border-red-500/20 py-3 px-6 rounded-2xl flex items-center justify-center gap-3 backdrop-blur-sm">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div>
-            <p className="text-red-500 text-sm md:text-base font-bold text-center">
+        {/* DISCLAIMER DE URGÊNCIA NO PREÇO - STYLING REFINADO */}
+        <div className="w-full mb-8">
+          <div className="bg-[#1a0a0a] border border-red-900/40 py-4 px-6 rounded-2xl flex items-center justify-center gap-4 backdrop-blur-md shadow-2xl">
+            <div className="relative flex h-3 w-3 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></span>
+            </div>
+            <p className="text-red-600 text-sm md:text-base font-extrabold text-center tracking-tight">
               Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
             </p>
           </div>

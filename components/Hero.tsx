@@ -22,19 +22,9 @@ export const Hero = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col items-center text-center">
         
         {/* BADGE SUPERIOR - MÉTODO VALIDADO */}
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-8 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
+        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border-2 border-amber-500/60 text-amber-400 text-sm sm:text-base font-extrabold mb-12 badge-pulse shadow-[0_0_30px_rgba(245,158,11,0.2)] backdrop-blur-xl tracking-tight">
           <Star className="w-5 h-5 fill-amber-500 animate-[spin_4s_linear_infinite]" />
           <span className="uppercase tracking-widest">Método validado por + de 200 empresas</span>
-        </div>
-
-        {/* DISCLAIMER DE URGÊNCIA */}
-        <div className="w-full max-w-2xl mb-10">
-          <div className="bg-red-500/5 border border-red-500/20 py-3 px-6 rounded-xl flex items-center justify-center gap-3 backdrop-blur-sm">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div>
-            <p className="text-red-500 text-sm md:text-base font-bold text-center">
-              Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
-            </p>
-          </div>
         </div>
         
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-8 text-white font-serif drop-shadow-2xl">
@@ -69,15 +59,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* NOVO SELO DE GARANTIA (Reposicionado abaixo do Trust Bar) */}
-        <div className="w-full max-w-md mx-auto">
+        {/* SELO DE GARANTIA */}
+        <div className="w-full max-w-md mx-auto mb-10">
           <div className="relative group perspective-1000">
-            {/* Efeito de Brilho Suave */}
             <div className="absolute inset-0 bg-amber-500/10 rounded-[2rem] blur-xl group-hover:bg-amber-500/20 transition-all duration-700"></div>
-            
             <div className="relative bg-[#0F172A] border border-amber-500/30 p-6 md:p-8 rounded-[2rem] shadow-2xl flex flex-col gap-5 text-left transition-transform duration-500 hover:scale-[1.02]">
-              
-              {/* Header do Selo */}
               <div className="flex items-center gap-4">
                 <div className="bg-amber-500 p-2.5 rounded-xl shadow-[0_0_15px_rgba(245,158,11,0.4)]">
                   <ShieldCheck className="w-6 h-6 text-[#0F172A]" />
@@ -86,13 +72,9 @@ export const Hero = () => {
                   Garantia de <br className="md:hidden" /> Simplicidade
                 </span>
               </div>
-
-              {/* Conteúdo Principal */}
               <p className="text-white font-bold text-base md:text-lg leading-snug">
                 Aplique mesmo sem experiência em marketing.
               </p>
-
-              {/* Pill de CTA da Garantia */}
               <div className="bg-transparent border border-amber-500/40 py-3 px-4 rounded-xl flex items-center gap-3">
                  <RotateCcw className="w-5 h-5 text-amber-500" />
                  <span className="text-[11px] md:text-xs font-black text-amber-500 uppercase tracking-widest leading-none">
@@ -100,6 +82,19 @@ export const Hero = () => {
                  </span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* DISCLAIMER DE URGÊNCIA - POSICIONADO APÓS A GARANTIA */}
+        <div className="w-full max-w-3xl">
+          <div className="bg-[#1a0a0a] border border-red-900/40 py-4 px-6 rounded-2xl flex items-center justify-center gap-4 backdrop-blur-md shadow-2xl">
+            <div className="relative flex h-3 w-3 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></span>
+            </div>
+            <p className="text-red-600 text-sm md:text-base font-extrabold text-center tracking-tight">
+              Esta oferta é válida apenas agora. Ao sair da página, o desconto expira.
+            </p>
           </div>
         </div>
 
